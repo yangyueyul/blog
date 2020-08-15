@@ -22,20 +22,18 @@ function getWebSidebar() {
   return [
     {
       title: 'JavaScript',
-      children: ['javascript/base', 'javascript/modules'],
-      sidebarDepth: 1,
+      collapsable: false,
+      children: ['', 'javascript/base', 'javascript/modules'],
     },
     {
+      collapsable: false,
       title: 'CSS',
       children: ['css/base'],
     },
     {
       title: 'HTML',
+      collapsable: false,
       children: ['html/base'],
     },
   ];
-}
-
-function getApiSidebar() {
-  return ['cli', 'node'];
 }
