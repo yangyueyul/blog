@@ -1,18 +1,25 @@
 const WebpackAliyunOss = require('webpack-aliyun-oss');
 
 module.exports = {
-  title: '',
+  title: 'yangyueyul',
+  description: '大前端',
   themeConfig: {
-    sidebar: [
+    logo: '/favicon.ico',
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '引导', link: '/pages/guild/' },
       {
-        title: 'Group 1', // 必要的
-        path: '/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        text: '分类',
+        ariaLabel: '分类',
+        items: [
+          { text: '文章', link: '/pages/xx/t1.md' },
+          { text: '文字', link: '/pages/xx/t2.md' },
+        ],
       },
-      {
-        title: '888',
-        path: 'guide/',
-      },
+      { text: 'Github', link: 'https://github.com/yangyueyul' },
     ],
+    sidebar: 'auto',
+    lastUpdated: 'Last Updated',
   },
   configureWebpack: {
     plugins: [
@@ -25,8 +32,8 @@ module.exports = {
         setOssPath(filePath) {
           filePath = filePath.replace(__dirname, '');
           return filePath;
-        }
-      })
+        },
+      }),
     ],
   },
 };
