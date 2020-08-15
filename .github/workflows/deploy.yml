@@ -23,22 +23,22 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-
-    # Runs a set of commands using the runners shell
-    - name: npm install, build
-      run: |
-        npm install
-        npm run build
-      env:
-        CI: true
+      - run: |
+        node -v
+    # npm install
+    - name: npm install
+      run: npm install
+    - name: build
+      run: npm run build
     
     # 阿里云
-    - name: setup aliyun oss
-      uses: manyuanrong/setup-ossutil@v1.0
+    - name: upload to aliyun oss
+      uses: manyuanrong/setup-ossutil@master
       with:
         endpoint: oss-cn-beijing.aliyuncs.com
         access-key-id: ${{ secrets.OSS_KEY_ID }}
         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-    - name: cp files to aliyun
-      run: ossutil cp -rf doc/.vuepress/dist oss://blog-yangyueyul/
-
+    - name: cp files to aliyun oss
+      run: ossutil cp -rf docs/.vuepress/dist oss://blog-yangyueyul/
+    - name: setup cache-control
+      run: ossutil set-meta oss://blog-yangyueyul/assets cache-control:"max-age=31536000" --update -rf
