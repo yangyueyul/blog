@@ -41,4 +41,4 @@ jobs:
     - name: setup cache-control
       run: ossutil set-meta oss://blog-yangyueyul/index.html cache-control:"no-cache" --update -rf
     - name: setup cache-control
-      run: ossutil set-meta oss://blog-yangyueyul/assets cache-control:"max-age=31536000" --update -rf
+      run: ossutil set-meta oss://blog-yangyueyul/assets cache-control:"max-age=2592000" --update -rf
