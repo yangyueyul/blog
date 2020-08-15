@@ -39,6 +39,6 @@ jobs:
     - name: cp files to aliyun oss
       run: ossutil cp -rf docs/.vuepress/dist oss://blog-yangyueyul/
     - name: setup cache-control
-      run: ossutil set-meta oss://blog-yangyueyul/index.html cache-control:"no-cache" --update -rf
+      run: ossutil set-meta oss://blog-yangyueyul/ cache-control:"no-cache" --include "*.html" -u -rf
     - name: setup cache-control
-      run: ossutil set-meta oss://blog-yangyueyul/assets cache-control:"max-age=2592000" --update -rf
+      run: ossutil set-meta oss://blog-yangyueyul/assets cache-control:"max-age=2592000" -u -rf
