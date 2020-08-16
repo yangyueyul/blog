@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /logo-108.png
+heroImage: /logo-512.png
 heroText: yangyueyul
-tagline: Vue 驱动的静态网站生成器
+tagline: 杨越Yul的个人博客
 actionText: 点击进入 →
 actionLink: /web/
 features:
@@ -12,5 +12,6 @@ features:
   details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
 - title: 高性能
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present yangyueyul
+footer: MIT Licensed | Copyright © 2018 yangyueyul
+pageClass: hero
 ---

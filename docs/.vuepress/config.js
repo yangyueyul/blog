@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'yangyueyul',
+  title: '杨越Yul',
   description: '大前端',
   themeConfig: {
-    logo: '/favicon.ico',
+    logo: '/logo-108.png',
     nav: require('./nav/zh'),
     sidebar: {
       '/web/': getWebSidebar(),
