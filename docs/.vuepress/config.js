@@ -7,13 +7,17 @@ module.exports = {
     sidebar: {
       '/web/': getWebSidebar(),
       // '/node/': getPluginSidebar(),
-
       // '/android/': getThemeSidebar(),
       // '/algorithm/': getThemeSidebar(),
       // '/datastructure/': getThemeSidebar(),
 
       // '/flutter/': getThemeSidebar(),
     },
+    repo: 'https://github.com/yangyueyul/blog',
+    docsDir: 'docs',
+    docsBranch: 'master',
+    editLinks: true,
+    editLinkText: '在GitHub上编辑此页面',
   },
   smoothScroll: true,
 };
