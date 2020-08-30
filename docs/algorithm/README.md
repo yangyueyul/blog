@@ -1,5 +1,10 @@
-# 算法
-
-::: tip
-Theme components are under the same [browser API access restrictions](../guide/using-vue.md#browser-api-access-restrictions).
-:::
+# 复杂度计算
+## 时间复杂度
+* 代码设计
+## 空间复杂度
+* 数据结构的选择
+## 规则
+* 与常数无关 n 和 2n
+* 相加选高的 n^2 + n
+* 1代表与个数无关
+ 
