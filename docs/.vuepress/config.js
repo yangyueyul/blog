@@ -1,3 +1,5 @@
+const web = require('./category/web')
+
 module.exports = {
   title: '杨越Yul',
   description: '大前端',
@@ -5,7 +7,7 @@ module.exports = {
     logo: '/logo-108.png',
     nav: require('./nav/zh'),
     sidebar: {
-      '/web/': getWebSidebar(),
+      '/web/': web,
       // '/node/': getPluginSidebar(),
       // '/android/': getThemeSidebar(),
       // '/algorithm/': getThemeSidebar(),
@@ -13,7 +15,7 @@ module.exports = {
 
       // '/flutter/': getThemeSidebar(),
     },
-    repo: 'https://github.com/yangyueyul/blog',
+    repo: 'yangyueyul/blog',
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
@@ -21,7 +23,10 @@ module.exports = {
   },
   smoothScroll: true,
   head: [
-    ['script',{},`
+    [
+      'script',
+      {},
+      `
         var _mtac = {"senseQuery":1};
         (function() {
           var mta = document.createElement("script");
@@ -32,26 +37,7 @@ module.exports = {
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(mta, s);
         })();
-    `]
-  ]
+    `,
+    ],
+  ],
 };
-
-function getWebSidebar() {
-  return [
-    {
-      title: 'JavaScript',
-      collapsable: false,
-      children: ['', 'javascript/base', 'javascript/modules'],
-    },
-    {
-      collapsable: false,
-      title: 'CSS',
-      children: ['css/base'],
-    },
-    {
-      title: 'HTML',
-      collapsable: false,
-      children: ['html/base'],
-    },
-  ];
-}

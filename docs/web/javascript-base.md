@@ -5,5 +5,3 @@
 VuePress 
 
 ## 理解 this 关键词
-
-VuePress 
