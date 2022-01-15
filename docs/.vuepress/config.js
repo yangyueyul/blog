@@ -27,6 +27,15 @@ module.exports = {
       'script',
       {},
       `
+       setTimeout(() => {
+        var a = document.createElement('a');
+        a.setAttribute('href', "https://beian.miit.gov.cn/");
+        a.innerText = "京ICP备19006890号-1";
+        a.setAttribute("class", "icp");
+        document.body.appendChild(a);
+        console.log('12321321')
+      }, 100);
+
         var _mtac = {"senseQuery":1};
         (function() {
           var mta = document.createElement("script");
